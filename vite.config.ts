@@ -4,6 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
+    base: '/kaikyoudou/',   // ← これを追加！
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
