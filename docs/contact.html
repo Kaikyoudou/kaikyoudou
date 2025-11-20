@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>お問い合わせ — 海峡堂</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html">海峡堂</a>
+      <button class="menu-toggle" aria-label="メニュー">☰</button>
+      <nav class="main-nav">
+        <a href="./index.html">トップ</a>
+        <a href="./products.html">商品一覧</a>
+        <a href="./contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>お問い合わせ</h1>
+    <p>以下のフォームからお問い合わせください。送信は実装されていません（レイアウトのみ）。</p>
+
+    <form class="contact-form" action="#" method="post">
+      <label>お名前
+        <input type="text" name="name" placeholder="例：山田 太郎">
+      </label>
+      <label>メールアドレス
+        <input type="email" name="email" placeholder="example@example.com">
+      </label>
+      <label>お問い合わせ内容
+        <textarea name="message" rows="6" placeholder="ご用件を入力してください"></textarea>
+      </label>
+      <p><button class="btn" type="submit">送信（ダミー）</button></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 海峡堂</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

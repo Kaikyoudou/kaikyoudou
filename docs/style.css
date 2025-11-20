@@ -1,0 +1,54 @@
+/* style.css — シンプル＆レスポンシブな基礎スタイル */
+:root{
+  --max-width:1100px;
+  --accent:#0b6e6f;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;line-height:1.5;color:#111;background:#fff;margin:0}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{border-bottom:1px solid #eee;background:#fff}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.brand{font-weight:700;text-decoration:none;color:var(--accent);font-size:1.25rem}
+.main-nav a{margin-left:1rem;color:#222;text-decoration:none}
+.menu-toggle{display:none;background:none;border:0;font-size:1.25rem}
+
+.hero{padding:2rem 0}
+.hero-inner{display:flex;gap:1.5rem;align-items:center}
+.hero-image{width:40%;max-width:420px;height:auto;border-radius:8px;background:#f6f6f6}
+.hero-text h1{margin:0;font-size:2rem}
+.lead{color:var(--muted);margin-top:0.5rem}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.cards{margin-top:1rem}
+.card{border:1px solid #eee;padding:0.75rem;border-radius:8px;background:#fff}
+.card img{width:100%;height:auto;border-radius:6px}
+.card h3{margin:0.5rem 0 0.25rem}
+.price{color:var(--accent);font-weight:600}
+
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:0.5rem 0.9rem;border-radius:6px;text-decoration:none}
+.btn.small{padding:0.35rem 0.6rem;font-size:0.9rem}
+.btn.buy{background:#c65b4a}
+
+.site-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem;color:var(--muted)}
+
+.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.product-image img{width:100%;border-radius:8px}
+.product-info h1{margin-top:0}
+.back{display:inline-block;margin-bottom:1rem;color:#333;text-decoration:none}
+
+.contact-form label{display:block;margin:0.5rem 0}
+.contact-form input,.contact-form textarea{width:100%;padding:0.6rem;border:1px solid #ddd;border-radius:6px}
+
+/* レスポンシブ */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero-inner{flex-direction:column}
+  .hero-image{width:100%}
+  .product-grid{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .main-nav{display:none}
+  .menu-toggle{display:block}
+}

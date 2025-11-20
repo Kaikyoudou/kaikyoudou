@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="100%" height="100%" fill="#f0f7ff"/>
+  <g fill="#d6e7ff">
+    <rect x="40" y="40" width="720" height="520" rx="8"/>
+  </g>
+  <text x="50%" y="55%" font-size="22" text-anchor="middle" fill="#bcd6ff">商品画像（ダミー）</text>
+</svg>
