@@ -1,0 +1,115 @@
+[
+  {
+    "id": "flake-sticker",
+    "name": "フレークステッカー（3種セット）",
+    "price": 500,
+    "excerpt": "海とまちのモチーフをあしらった、3種類のフレークステッカーセット。手帳やノート、水筒など、好きなところに貼ってデコレーション。",
+    "description": "海と暮らす風景を表現した3種類のステッカーが入ったセットです。毎日の生活に小さな彩りを加えます。手帳、スマートフォン、ノートパック、水筒など、あらゆるアイテムにぴったり。剥がしやすいので、気分や季節で張り替えることもできます。",
+    "specs": [
+      "素材：ビニール（フレークステッカー）",
+      "サイズ：各種異なります（直径2〜5cm程度）",
+      "セット内容：3種類各1枚",
+      "防水処理：あり"
+    ],
+    "image": "./assets/images/placeholder-1.svg",
+    "squareUrl": "https://squareup.com/placeholder",
+    "page": "product-flake-sticker.html"
+  },
+  {
+    "id": "post-seal",
+    "name": "ポストのシール（1枚）",
+    "price": 300,
+    "excerpt": "懐かしのポストをモチーフにした、大判ステッカー。街角の風景にこっと貼って、まちを彩ります。",
+    "description": "まちの風景になじむポストのシールです。ステッカーなので、好きな場所に貼ることができます（貼る場所は適切に選んでください）。懐かしさと親しみやすさを持つデザインは、どんなシーンでも活躍します。",
+    "specs": [
+      "素材：ビニール防水ステッカー",
+      "サイズ：約W8cm × H12cm",
+      "枚数：1枚",
+      "防水処理：あり"
+    ],
+    "image": "./assets/images/placeholder-2.svg",
+    "squareUrl": "https://squareup.com/placeholder",
+    "page": "product-post-seal.html"
+  },
+  {
+    "id": "vending-machine-seal",
+    "name": "自販機のシール（1枚）",
+    "price": 300,
+    "excerpt": "レトロな自販機をデザインしたステッカー。懐かしさとノスタルジア、まちの素朴さを表現。",
+    "description": "日本の街角に欠かせない自販機。そのレトロなデザインをステッカーにしました。どこかなつかしい雰囲気をあなたのアイテムに添えます。スマートフォンケース、ラップトップ、水筒など、さまざまなものに貼ることができます。",
+    "specs": [
+      "素材：ビニール防水ステッカー",
+      "サイズ：約W6cm × H10cm",
+      "枚数：1枚",
+      "防水処理：あり"
+    ],
+    "image": "./assets/images/placeholder-3.svg",
+    "squareUrl": "https://squareup.com/placeholder",
+    "page": "product-vending-machine-seal.html"
+  },
+  {
+    "id": "towel-handkerchief",
+    "name": "タオルハンカチ（全2種）",
+    "price": 600,
+    "excerpt": "上質な綿素材で、肌にやさしいタオルハンカチ。毎日使える、2種類のデザインから選べます。",
+    "description": "海とまちの風景をモチーフにした、上質なタオルハンカチです。吸水性に優れた綿素材を使用しているため、毎日の使用に適しています。デスクに、バッグに、ポケットに。ちょっとした季節の変化も、このハンカチで感じることができます。2種類のデザインがあるので、お気に入りを選んでください。",
+    "specs": [
+      "素材：綿100%",
+      "サイズ：約25cm × 25cm",
+      "種類：2種類（海のデザイン、まちのデザイン）",
+      "吸水性：優良"
+    ],
+    "image": "./assets/images/placeholder-4.svg",
+    "squareUrl": "https://squareup.com/placeholder",
+    "page": "product-towel-handkerchief.html"
+  },
+  {
+    "id": "clear-file",
+    "name": "クリアファイル（1枚）",
+    "price": 300,
+    "excerpt": "シンプルで上品なクリアファイル。大切な書類や写真を守ります。オフィスから日常まで。",
+    "description": "海とまちのモチーフを施したクリアファイル。透明度高い素材で、書類や写真をクリアに見せながら保護します。シンプルなデザインなので、オフィスでも日常でも、どんな場面でも活躍します。書類の整理、写真の保管、資料の持ち運びなど、毎日の必需品。",
+    "specs": [
+      "素材：PP（ポリプロピレン）",
+      "サイズ：A4（約21cm × 29.7cm）",
+      "厚さ：0.4mm",
+      "耐久性：優良"
+    ],
+    "image": "./assets/images/placeholder-1.svg",
+    "squareUrl": "https://squareup.com/placeholder",
+    "page": "product-clear-file.html"
+  },
+  {
+    "id": "rubber-strap",
+    "name": "ラバーストラップ（1個）",
+    "price": 700,
+    "excerpt": "かわいらしいラバーストラップ。バッグやキーホルダー、スマートフォンアクセサリーとして。",
+    "description": "海やまちのかわいらしいキャラクターをモチーフにしたラバーストラップです。バッグのポケットやキーホルダーの一部として、スマートフォンケースのアクセサリーとして。毎日の相棒として、あなたのそばに。シンプルながら個性的なデザインが、日常をちょっと彩ります。",
+    "specs": [
+      "素材：ラバー（PVC）",
+      "サイズ：約H6cm × W4cm",
+      "ストラップ：ナイロン製、調整可能",
+      "耐久性：優良"
+    ],
+    "image": "./assets/images/placeholder-2.svg",
+    "squareUrl": "https://squareup.com/placeholder",
+    "page": "product-rubber-strap.html"
+  },
+  {
+    "id": "multi-pouch",
+    "name": "マルチポーチ（1個）",
+    "price": 1000,
+    "excerpt": "多機能なマルチポーチ。小物整理から旅行まで、活躍シーンは無限大。毎日の相棒に。",
+    "description": "海とまちをテーマにした、使い勝手の良いマルチポーチです。コスメ、ステーショナリー、薬、小物類などをコンパクトに整理できます。旅行時の持ち運びにも最適。しっかりした作りと上質な素材を使用しているため、長く愛用できます。バッグの中をスッキリ整理して、毎日をもっと快適に。",
+    "specs": [
+      "素材：綿麻混紡（表面）、中綿入り",
+      "サイズ：約W18cm × H10cm × D8cm",
+      "ファスナー：YKK 製、スムーズに開閉",
+      "内ポケット：1つ",
+      "耐久性：優良"
+    ],
+    "image": "./assets/images/placeholder-3.svg",
+    "squareUrl": "https://squareup.com/placeholder",
+    "page": "product-multi-pouch.html"
+  }
+]

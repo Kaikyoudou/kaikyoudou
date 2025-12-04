@@ -35,44 +35,7 @@
 
     <section class="latest container">
       <h2>最新商品</h2>
-      <div class="grid cards">
-        <article class="card">
-          <img src="./assets/images/placeholder-1.svg" alt="フレークステッカー">
-          <h3>フレークステッカー（3種セット）</h3>
-          <p class="price">¥500</p>
-          <p><a href="./product-flake-sticker.html" class="btn small">詳細を見る</a></p>
-        </article>
-        <article class="card">
-          <img src="./assets/images/placeholder-2.svg" alt="ポストのシール">
-          <h3>ポストのシール（1枚）</h3>
-          <p class="price">¥300</p>
-          <p><a href="./product-post-seal.html" class="btn small">詳細を見る</a></p>
-        </article>
-        <article class="card">
-          <img src="./assets/images/placeholder-3.svg" alt="自販機のシール">
-          <h3>自販機のシール（1枚）</h3>
-          <p class="price">¥300</p>
-          <p><a href="./product-vending-machine-seal.html" class="btn small">詳細を見る</a></p>
-        </article>
-        <article class="card">
-          <img src="./assets/images/placeholder-4.svg" alt="タオルハンカチ">
-          <h3>タオルハンカチ（全2種）</h3>
-          <p class="price">¥600</p>
-          <p><a href="./product-towel-handkerchief.html" class="btn small">詳細を見る</a></p>
-        </article>
-        <article class="card">
-          <img src="./assets/images/placeholder-1.svg" alt="クリアファイル">
-          <h3>クリアファイル（1枚）</h3>
-          <p class="price">¥300</p>
-          <p><a href="./product-clear-file.html" class="btn small">詳細を見る</a></p>
-        </article>
-        <article class="card">
-          <img src="./assets/images/placeholder-2.svg" alt="ラバーストラップ">
-          <h3>ラバーストラップ（1個）</h3>
-          <p class="price">¥700</p>
-          <p><a href="./product-rubber-strap.html" class="btn small">詳細を見る</a></p>
-        </article>
-      </div>
+      <div class="grid cards"></div>
     </section>
   </main>
 
@@ -83,5 +46,11 @@
   </footer>
 
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/product-loader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      renderLatestProducts('.grid.cards');
+    });
+  </script>
 </body>
 </html>
