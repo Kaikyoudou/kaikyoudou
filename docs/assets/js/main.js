@@ -14,6 +14,42 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Basic image protection deterrents
+// Inject display watermark overlays onto images with class 'protect-img'
+function injectImageWatermarks(text) {
+  const targets = document.querySelectorAll('img.protect-img');
+  targets.forEach(img => {
+    // ensure the parent is positioned
+    const wrapper = img.parentElement;
+    if (!wrapper) return;
+    if (getComputedStyle(wrapper).position === 'static') wrapper.style.position = 'relative';
+
+    // avoid inserting multiple overlays
+    if (wrapper.querySelector('.img-watermark-overlay')) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'img-watermark-overlay';
+    overlay.textContent = text || '海峡堂';
+    wrapper.appendChild(overlay);
+  });
+}
+
+// Run watermark injection on load and when new images are added
+function setupWatermarking() {
+  injectImageWatermarks('海峡堂');
+  const obs = new MutationObserver(mutations => {
+    for (const m of mutations) {
+      if (m.type === 'childList') {
+        injectImageWatermarks('海峡堂');
+      }
+    }
+  });
+  obs.observe(document.body, {childList:true, subtree:true});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  try{ setupWatermarking(); }catch(e){}
+});
+
   // NOTE: These are client-side deterrents only. They make casual saving harder
   // (right-click / drag blocked, transparent overlay), but cannot fully prevent
   // determined users from capturing images (screenshots or devtools).

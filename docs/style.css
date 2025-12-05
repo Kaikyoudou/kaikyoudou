@@ -52,6 +52,26 @@ body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto S
   .form-embed iframe{min-height:720px}
 }
 
+/* Visual watermark overlay on images */
+.img-watermark-overlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(-20deg);
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.12);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.05);
+  pointer-events: none; /* allow clicks to pass through */
+  z-index: 9;
+  white-space: nowrap;
+}
+
+/* Slightly different style for small screens */
+@media (max-width:600px){
+  .img-watermark-overlay{font-size:32px;opacity:0.14}
+}
+
 /* レスポンシブ */
 @media (max-width:900px){
   .grid{grid-template-columns:repeat(2,1fr)}

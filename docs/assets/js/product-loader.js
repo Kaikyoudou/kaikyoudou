@@ -89,7 +89,7 @@ async function renderProductCards(containerId = '.grid.cards') {
     const card = document.createElement('article');
     card.className = 'card';
     card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
+      <img class="protect-img" src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p class="price">¥${product.price.toLocaleString('ja-JP')}</p>
       <p><a href="${product.page}" class="btn small">詳細</a></p>
@@ -118,7 +118,7 @@ async function renderLatestProducts(containerId = '.grid.cards') {
     const card = document.createElement('article');
     card.className = 'card';
     card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
+      <img class="protect-img" src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p class="price">¥${product.price.toLocaleString('ja-JP')}</p>
       <p><a href="${product.page}" class="btn small">詳細を見る</a></p>
