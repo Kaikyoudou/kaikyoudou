@@ -1,16 +1,19 @@
 /* style.css — シンプル＆レスポンシブな基礎スタイル */
 :root{
   --max-width:1100px;
-  --accent:#0b6e6f;
-  --muted:#666;
+  /* メインカラー（紺）とその濃淡 */
+  --accent:#0b3b66; /* navy */
+  --accent-dark:#07263a;
+  --muted:#6b7b8c; /* 紺寄りのミュート */
+  --card-border:#e6eef6;
 }
 *{box-sizing:border-box}
 body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;line-height:1.5;color:#111;background:#fff;margin:0}
 .container{max-width:var(--max-width);margin:0 auto;padding:1rem}
-.site-header{border-bottom:1px solid #eee;background:#fff}
+.site-header{border-bottom:1px solid rgba(11,59,102,0.06);background:#fff}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
 .brand{font-weight:700;text-decoration:none;color:var(--accent);font-size:1.25rem}
-.main-nav a{margin-left:1rem;color:#222;text-decoration:none}
+.main-nav a{margin-left:1rem;color:var(--accent);text-decoration:none}
 .menu-toggle{display:none;background:none;border:0;font-size:1.25rem}
 
 .hero{padding:2rem 0}
@@ -21,16 +24,18 @@ body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto S
 
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .cards{margin-top:1rem}
-.card{border:1px solid #eee;padding:0.75rem;border-radius:8px;background:#fff}
+.card{border:1px solid var(--card-border);padding:0.75rem;border-radius:8px;background:#fff}
 .card img{width:100%;height:auto;border-radius:6px}
 .card h3{margin:0.5rem 0 0.25rem}
 .price{color:var(--accent);font-weight:600}
 
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:0.5rem 0.9rem;border-radius:6px;text-decoration:none}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:0.5rem 0.9rem;border-radius:6px;text-decoration:none;transition:background .12s ease}
 .btn.small{padding:0.35rem 0.6rem;font-size:0.9rem}
-.btn.buy{background:#c65b4a}
+.btn:hover{background:var(--accent-dark)}
+.btn.buy{background:var(--accent-dark)}
 
-.site-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem;color:var(--muted)}
+.site-footer{border-top:none;padding:1.25rem 0;margin-top:2rem;background:var(--accent);color:#fff}
+.site-footer a{color:rgba(255,255,255,0.9);text-decoration:none}
 
 .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
 .product-image img{width:100%;border-radius:8px}
