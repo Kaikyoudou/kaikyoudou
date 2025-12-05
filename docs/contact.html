@@ -21,20 +21,11 @@
 
   <main class="container">
     <h1>お問い合わせ</h1>
-    <p>以下のフォームからお問い合わせください。送信は実装されていません（レイアウトのみ）。</p>
+    <p>以下のフォームからお問い合わせください。フォームは埋め込みで表示されます。</p>
 
-    <form class="contact-form" action="#" method="post">
-      <label>お名前
-        <input type="text" name="name" placeholder="例：山田 太郎">
-      </label>
-      <label>メールアドレス
-        <input type="email" name="email" placeholder="example@example.com">
-      </label>
-      <label>お問い合わせ内容
-        <textarea name="message" rows="6" placeholder="ご用件を入力してください"></textarea>
-      </label>
-      <p><button class="btn" type="submit">送信（ダミー）</button></p>
-    </form>
+    <div class="form-embed">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfKRFugaEMDgWyUGhqjWPAJanMr1c_JMMBJdFi2pJ-g3gYobw/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+    </div>
   </main>
 
   <footer class="site-footer">
