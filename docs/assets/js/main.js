@@ -1,13 +1,69 @@
-// Simple JS: mobile menu toggle
-document.addEventListener('DOMContentLoaded',function(){
+// Simple JS: mobile menu toggle + basic image-protection deterrents
+document.addEventListener('DOMContentLoaded', function () {
+  // Mobile menu toggle
   var btn = document.querySelector('.menu-toggle');
   var nav = document.querySelector('.main-nav');
-  if(!btn || !nav) return;
-  btn.addEventListener('click',function(){
-    if(nav.style.display === 'block'){
-      nav.style.display = '';
-    } else {
-      nav.style.display = 'block';
-    }
-  });
+  if (btn && nav) {
+    btn.addEventListener('click', function () {
+      if (nav.style.display === 'block') {
+        nav.style.display = '';
+      } else {
+        nav.style.display = 'block';
+      }
+    });
+  }
+
+  // Basic image protection deterrents
+  // NOTE: These are client-side deterrents only. They make casual saving harder
+  // (right-click / drag blocked, transparent overlay), but cannot fully prevent
+  // determined users from capturing images (screenshots or devtools).
+  function protectImages() {
+    var imgs = document.querySelectorAll('img');
+    imgs.forEach(function (img) {
+      // disable dragging of images
+      img.addEventListener('dragstart', function (e) { e.preventDefault(); });
+      // disable context menu on images
+      img.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+      // CSS hints to disable selection/dragging
+      img.style.userSelect = 'none';
+      img.style.webkitUserDrag = 'none';
+      img.setAttribute('draggable', 'false');
+
+      // Add a transparent overlay to intercept long-press / right-click on touch
+      try {
+        var wrapper = img.parentElement;
+        // Only add overlay when parent is a block element and not already processed
+        if (wrapper && !wrapper.classList.contains('img-protect-wrap')) {
+          // make wrapper positioned so overlay can cover it
+          var computed = window.getComputedStyle(wrapper);
+          if (computed.position === 'static') {
+            wrapper.style.position = 'relative';
+          }
+          wrapper.classList.add('img-protect-wrap');
+          var ov = document.createElement('div');
+          ov.className = 'img-overlay';
+          // make overlay non-focusable and hidden from assistive tech
+          ov.setAttribute('aria-hidden', 'true');
+          ov.style.position = 'absolute';
+          ov.style.top = '0';
+          ov.style.left = '0';
+          ov.style.width = '100%';
+          ov.style.height = '100%';
+          ov.style.zIndex = '10';
+          ov.style.background = 'transparent';
+          // ensure overlay does not prevent clicks on controls outside the image
+          ov.style.pointerEvents = 'auto';
+          wrapper.appendChild(ov);
+        }
+      } catch (e) {
+        // ignore
+      }
+    });
+  }
+
+  protectImages();
+  // Re-run protection if DOM changes (e.g., dynamic content)
+  var ro = new MutationObserver(function () { protectImages(); });
+  ro.observe(document.body, { childList: true, subtree: true });
 });
+
