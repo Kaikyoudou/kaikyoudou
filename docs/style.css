@@ -40,6 +40,13 @@ body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto S
 .contact-form label{display:block;margin:0.5rem 0}
 .contact-form input,.contact-form textarea{width:100%;padding:0.6rem;border:1px solid #ddd;border-radius:6px}
 
+/* Google Form embed styling */
+.form-embed{width:100%;max-width:var(--max-width);margin:0 auto;padding:0.5rem}
+.form-embed iframe{width:100%;border:0;border-radius:8px;min-height:560px}
+@media (max-width:600px){
+  .form-embed iframe{min-height:720px}
+}
+
 /* レスポンシブ */
 @media (max-width:900px){
   .grid{grid-template-columns:repeat(2,1fr)}
