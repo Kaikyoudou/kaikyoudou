@@ -22,10 +22,10 @@ body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto S
 .hero-text h1{margin:0;font-size:2rem}
 .lead{color:var(--muted);margin-top:0.5rem}
 
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
 .cards{margin-top:1rem}
 .card{border:1px solid var(--card-border);padding:0.75rem;border-radius:8px;background:#fff}
-.card img{width:100%;height:auto;border-radius:6px}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:6px}
 .card h3{margin:0.5rem 0 0.25rem}
 .price{color:var(--accent);font-weight:600}
 
@@ -38,7 +38,7 @@ body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto S
 .site-footer a{color:rgba(255,255,255,0.9);text-decoration:none}
 
 .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
-.product-image img{width:100%;border-radius:8px}
+.product-image img{width:100%;max-height:420px;object-fit:contain;border-radius:8px}
 .product-info h1{margin-top:0}
 .back{display:inline-block;margin-bottom:1rem;color:#333;text-decoration:none}
 
@@ -74,7 +74,7 @@ body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto S
 
 /* レスポンシブ */
 @media (max-width:900px){
-  .grid{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
   .hero-inner{flex-direction:column}
   .hero-image{width:100%}
   .product-grid{grid-template-columns:1fr}
@@ -83,4 +83,20 @@ body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto S
   .grid{grid-template-columns:1fr}
   .main-nav{display:none}
   .menu-toggle{display:block}
+  .card{padding:0.6rem}
+  .card img{height:180px}
+  .container{padding:0.75rem}
+  .hero-text h1{font-size:1.4rem}
+  .lead{font-size:0.95rem}
+  /* Buttons full width on small screens for easier tapping */
+  .btn, .btn.small {display:block;width:100%;text-align:center}
+  /* Product detail adjustments */
+  .product-image img{max-height:320px}
+}
+
+/* Very small devices */
+@media (max-width:420px){
+  .card img{height:160px}
+  .hero-text h1{font-size:1.2rem}
+  .lead{font-size:0.9rem}
 }
