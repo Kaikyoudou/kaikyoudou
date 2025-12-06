@@ -81,16 +81,33 @@ document.addEventListener('DOMContentLoaded', () => {
           // make overlay non-focusable and hidden from assistive tech
           ov.setAttribute('aria-hidden', 'true');
           ov.style.position = 'absolute';
-          ov.style.top = '0';
-          ov.style.left = '0';
-          ov.style.width = '100%';
-          ov.style.height = '100%';
           ov.style.zIndex = '10';
           ov.style.background = 'transparent';
-          // ensure overlay does not prevent clicks on controls outside the image
-          // Do not block pointer events so links/buttons remain clickable
-          ov.style.pointerEvents = 'none';
+
+          // Position & size overlay to cover the image only (not entire wrapper)
+          function positionOverlay() {
+            try {
+              var top = img.offsetTop || 0;
+              var left = img.offsetLeft || 0;
+              var w = img.offsetWidth || img.clientWidth || img.naturalWidth || 0;
+              var h = img.offsetHeight || img.clientHeight || img.naturalHeight || 0;
+              ov.style.top = top + 'px';
+              ov.style.left = left + 'px';
+              ov.style.width = w + 'px';
+              ov.style.height = h + 'px';
+              // make overlay intercept pointer events only over the image area
+              ov.style.pointerEvents = 'auto';
+              // copy image border radius when possible
+              try { ov.style.borderRadius = window.getComputedStyle(img).borderRadius; } catch(e){}
+            } catch (e) {
+              // ignore
+            }
+          }
+
           wrapper.appendChild(ov);
+          positionOverlay();
+          img.addEventListener('load', positionOverlay);
+          window.addEventListener('resize', positionOverlay);
         }
       } catch (e) {
         // ignore
