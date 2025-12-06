@@ -95,8 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
               ov.style.left = left + 'px';
               ov.style.width = w + 'px';
               ov.style.height = h + 'px';
-              // make overlay intercept pointer events only over the image area
-              ov.style.pointerEvents = 'auto';
+              // Do not block pointer events; we already disable right-click/drag on images.
+              // Keep overlay visible but let clicks pass through so links/buttons remain usable.
+              ov.style.pointerEvents = 'none';
               // copy image border radius when possible
               try { ov.style.borderRadius = window.getComputedStyle(img).borderRadius; } catch(e){}
             } catch (e) {
