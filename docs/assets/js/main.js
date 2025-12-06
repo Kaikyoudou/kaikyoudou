@@ -88,7 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
           ov.style.zIndex = '10';
           ov.style.background = 'transparent';
           // ensure overlay does not prevent clicks on controls outside the image
-          ov.style.pointerEvents = 'auto';
+          // Do not block pointer events so links/buttons remain clickable
+          ov.style.pointerEvents = 'none';
           wrapper.appendChild(ov);
         }
       } catch (e) {
