@@ -1,56 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>海峡堂 — シンプルなオンラインストア</title>
+  <title>海峡堂 — 海とまちをつなぐ雑貨店</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a class="brand" href="./index.html">海峡堂</a>
+      <a class="brand" href="#top">海峡堂</a>
       <button class="menu-toggle" aria-label="メニュー">☰</button>
       <nav class="main-nav">
-        <a href="./index.html">トップ</a>
-        <a href="./products.html">商品一覧</a>
-        <a href="./contact.html">お問い合わせ</a>
+        <a href="#top">トップ</a>
+        <a href="#products">商品一覧</a>
+        <a href="#about">海峡堂について</a>
+        <a href="#news">お知らせ</a>
+        <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-inner">
-          <img src="./assets/images/hero-placeholder.svg" alt="メインビジュアル" class="hero-image">
-          <div class="hero-text">
-            <h1>海峡堂</h1>
-            <p class="lead">海とまちをつなぐ雑貨店</p>
-            <p><a class="btn" href="./products.html">商品を見る</a></p>
-          </div>
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="container hero-wrap">
+        <div class="hero-text">
+          <h1>海峡堂</h1>
+          <p class="sub">海とまちをつなぐ、日々にそっと寄りそう雑貨店</p>
+          <p class="cta-row"><a class="btn btn-primary" href="#products">商品を見る</a></p>
+        </div>
+        <div class="hero-media">
+          <img src="./assets/images/hero-placeholder.svg" alt="海の風景" class="hero-image">
         </div>
       </div>
     </section>
 
-    <section class="latest container">
-      <h2>最新商品</h2>
-      <div class="grid cards"></div>
+    <!-- FEATURES -->
+    <section id="features" class="section features">
+      <div class="container">
+        <h2>海峡堂のこだわり</h2>
+        <p class="section-lead">下関の海とまちの風景から生まれた、日常に寄り添う雑貨をお届けします。</p>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-ico">🌊</div>
+            <h3>関門の海をモチーフ</h3>
+            <p>地元の風景をベースにしたデザインで、みなさまの暮らしに寄り添います。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-ico">🧺</div>
+            <h3>日常づかいしやすい雑貨</h3>
+            <p>使いやすさを考慮したラインナップで日常シーンを彩ります。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-ico">📦</div>
+            <h3>下関から全国へ</h3>
+            <p>大切に梱包して、全国のお客さまへお届けします。</p>
+          </article>
+        </div>
+      </div>
     </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section products">
+      <div class="container">
+        <h2>最新商品</h2>
+        <p class="section-lead">おすすめのアイテムをピックアップしました。気になる商品は詳細をご覧ください。</p>
+        <div class="products-grid">
+          <article class="product-card">
+            <img src="./assets/images/placeholder-1.svg" alt="フレークステッカー" loading="lazy">
+            <h3>フレークステッカー（3種セット）</h3>
+            <p class="desc">手帳や小物を彩る小さなステッカーセット。</p>
+            <p class="price">¥500（税込）</p>
+            <p><a class="btn btn-outline" href="#">詳細を見る</a></p>
+          </article>
+          <article class="product-card">
+            <img src="./assets/images/placeholder-2.svg" alt="ポストのシール" loading="lazy">
+            <h3>ポストのシール（1枚）</h3>
+            <p class="desc">レトロなポストをイメージしたステッカー。</p>
+            <p class="price">¥300（税込）</p>
+            <p><a class="btn btn-outline" href="#">カートに入れる</a></p>
+          </article>
+          <article class="product-card">
+            <img src="./assets/images/placeholder-3.svg" alt="自販機のシール" loading="lazy">
+            <h3>自販機のシール（1枚）</h3>
+            <p class="desc">ノスタルジックなデザインのステッカー。</p>
+            <p class="price">¥300（税込）</p>
+            <p><a class="btn btn-outline" href="#">詳細を見る</a></p>
+          </article>
+          <article class="product-card">
+            <img src="./assets/images/placeholder-4.svg" alt="タオルハンカチ" loading="lazy">
+            <h3>タオルハンカチ（全2種）</h3>
+            <p class="desc">肌に優しい綿素材のタオルハンカチ。</p>
+            <p class="price">¥600（税込）</p>
+            <p><a class="btn btn-outline" href="#">カートに入れる</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container about-wrap">
+        <div class="about-text">
+          <h2>海峡堂について</h2>
+          <p class="section-lead">海のそばで育った店主が、下関の風景や生き物をモチーフに雑貨を制作しています。旅のおみやげにも、日常づかいにも馴染むデザインをお届けします。</p>
+        </div>
+        <div class="about-media">
+          <img src="./assets/images/placeholder-1.svg" alt="海辺の風景" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="section news">
+      <div class="container">
+        <h2>お知らせ</h2>
+        <ul class="news-list">
+          <li><time>2025-12-01</time> <strong>年末セールのお知らせ</strong> — 一部商品を対象にセールを実施します。</li>
+          <li><time>2025-11-15</time> <strong>新商品入荷</strong> — マルチポーチの新色が入荷しました。</li>
+          <li><time>2025-10-01</time> <strong>サイトリニューアル</strong> — サイトデザインをリニューアルしました。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>お問い合わせ</h2>
+        <p class="section-lead">ご質問・ご要望はこちらのフォームからご連絡ください（送信はダミーです）。</p>
+        <form action="" method="post" class="contact-form">
+          <label>お名前<br><input type="text" name="name" placeholder="例: 山田 太郎"></label>
+          <label>メールアドレス<br><input type="email" name="email" placeholder="example@example.com"></label>
+          <label>お問い合わせ内容<br><textarea name="message" rows="6" placeholder="ご質問やご要望を入力してください"></textarea></label>
+          <p><button type="submit" class="btn btn-primary">送信する</button></p>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 海峡堂</p>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© 海峡堂</p>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">特定商取引法に基づく表記</a>
+          <a href="#">利用規約</a>
+        </nav>
+        <div class="social">
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/product-loader.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      renderLatestProducts('.grid.cards');
-    });
+    // Header background on scroll
+    (function(){
+      var header = document.getElementById('site-header');
+      function onScroll(){
+        if(window.scrollY > 10){ header.classList.add('scrolled'); }
+        else{ header.classList.remove('scrolled'); }
+      }
+      document.addEventListener('scroll', onScroll);
+      onScroll();
+    })();
   </script>
 </body>
 </html>

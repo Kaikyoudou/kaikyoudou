@@ -1,92 +1,103 @@
 /* style.css — シンプル＆レスポンシブな基礎スタイル */
 :root{
   --max-width:1100px;
-  /* メインカラー（紺）とその濃淡 */
-  --accent:#0b3b66; /* navy */
-  --accent-dark:#07263a;
-  --muted:#6b7b8c; /* 紺寄りのミュート */
-  --card-border:#e6eef6;
-}
-*{box-sizing:border-box}
-body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;line-height:1.5;color:#111;background:#fff;margin:0}
-.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
-.site-header{border-bottom:1px solid rgba(11,59,102,0.06);background:#fff}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
-.brand{font-weight:700;text-decoration:none;color:var(--accent);font-size:1.25rem}
-.main-nav a{margin-left:1rem;color:var(--accent);text-decoration:none}
-.menu-toggle{display:none;background:none;border:0;font-size:1.25rem}
+  /* style.css - Landing page styles (mobile-first) */
+  :root{
+    --max-width:1100px;
+    --accent:#1E90FF; /* ocean blue */
+    --accent-dark:#1677d6;
+    --sub:#F5F1E8; /* pale beige */
+    --text:#111;
+    --muted:#6b6f75;
+    --radius:10px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;color:var(--text);background:#fff;margin:0;line-height:1.6}
+  .container{max-width:var(--max-width);margin:0 auto;padding:1rem}
 
-.hero{padding:2rem 0}
-.hero-inner{display:flex;gap:1.5rem;align-items:center}
-.hero-image{width:40%;max-width:420px;height:auto;border-radius:8px;background:#f6f6f6}
-.hero-text h1{margin:0;font-size:2rem}
-.lead{color:var(--muted);margin-top:0.5rem}
+  /* Header */
+  .site-header{position:fixed;left:0;right:0;top:0;z-index:40;background:transparent;transition:background .2s ease, box-shadow .2s ease}
+  .site-header.scrolled{background:rgba(255,255,255,0.95);box-shadow:0 4px 18px rgba(20,30,40,0.06);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem}
+  .brand{font-weight:800;text-decoration:none;color:var(--accent);font-size:1.25rem}
+  .main-nav a{margin-left:1rem;color:var(--text);text-decoration:none;font-weight:600}
+  .menu-toggle{display:none;background:none;border:0;font-size:1.25rem}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.cards{margin-top:1rem}
-.card{border:1px solid var(--card-border);padding:0.75rem;border-radius:8px;background:#fff}
-.card img{width:100%;height:160px;object-fit:cover;border-radius:6px}
-.card h3{margin:0.5rem 0 0.25rem}
-.price{color:var(--accent);font-weight:600}
+  /* Hero (mobile-first stacked) */
+  .hero{padding-top:78px;padding-bottom:48px;min-height:70vh;display:flex;align-items:center}
+  .hero-wrap{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center}
+  .hero-text h1{margin:0;font-size:2rem;letter-spacing:0.02em}
+  .hero-text .sub{margin-top:0.5rem;color:var(--muted)}
+  .cta-row{margin-top:1rem}
+  .hero-image{width:100%;height:220px;object-fit:cover;border-radius:10px;background:#eee}
 
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:0.5rem 0.9rem;border-radius:6px;text-decoration:none;transition:background .12s ease}
-.btn.small{padding:0.35rem 0.6rem;font-size:0.9rem}
-.btn:hover{background:var(--accent-dark)}
-.btn.buy{background:var(--accent-dark)}
+  /* Buttons */
+  .btn{display:inline-block;padding:0.7rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;border:0;cursor:pointer}
+  .btn-primary{background:var(--accent);color:#fff;font-size:1rem}
+  .btn-primary:hover{background:var(--accent-dark)}
+  .btn-outline{background:#fff;border:1px solid #e6e6e6;color:var(--text)}
+  .btn-outline:hover{background:#f7f7f7}
 
-.site-footer{border-top:none;padding:1.25rem 0;margin-top:2rem;background:var(--accent);color:#fff}
-.site-footer a{color:rgba(255,255,255,0.9);text-decoration:none}
+  /* Features */
+  .section{padding:48px 0}
+  .features .section-lead{margin-bottom:1rem;color:var(--muted)}
+  .features-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1rem}
+  .feature-card{background:#fff;border-radius:10px;padding:1rem;border:1px solid #f0f0f0}
+  .feature-ico{font-size:32px;margin-bottom:0.5rem}
+  .feature-card h3{margin:0.25rem 0}
 
-.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
-.product-image img{width:100%;max-height:420px;object-fit:contain;border-radius:8px}
-.product-info h1{margin-top:0}
-.back{display:inline-block;margin-bottom:1rem;color:#333;text-decoration:none}
+  /* Products */
+  .products .section-lead{margin-bottom:1rem;color:var(--muted)}
+  .products-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+  .product-card{background:#fff;border-radius:10px;padding:0.8rem;border:1px solid #f0f0f0;display:flex;flex-direction:column;align-items:start}
+  .product-card img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:0.6rem}
+  .product-card h3{margin:0.25rem 0}
+  .product-card .desc{color:var(--muted);font-size:0.95rem}
+  .product-card .price{color:var(--accent);font-weight:700;margin-top:0.5rem}
 
-.contact-form label{display:block;margin:0.5rem 0}
-.contact-form input,.contact-form textarea{width:100%;padding:0.6rem;border:1px solid #ddd;border-radius:6px}
+  /* About */
+  .about-wrap{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center}
+  .about-media img{width:100%;height:220px;object-fit:cover;border-radius:10px}
 
-/* Google Form embed styling */
-.form-embed{width:100%;max-width:var(--max-width);margin:0 auto;padding:0.5rem}
-.form-embed iframe{width:100%;border:0;border-radius:8px;min-height:560px}
-@media (max-width:600px){
-  .form-embed iframe{min-height:720px}
-}
+  /* News */
+  .news-list{list-style:none;padding:0;margin:0;display:grid;gap:0.6rem}
+  .news-list li{background:#fff;padding:0.8rem;border-radius:8px;border:1px solid #f2f2f2}
+  .news-list time{color:var(--muted);font-size:0.9rem;margin-right:0.5rem}
 
-/* Visual watermark overlay on images */
-.img-watermark-overlay{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%) rotate(-20deg);
-  font-size: 48px;
-  font-weight: 700;
-  color: rgba(255,255,255,0.12);
-  text-shadow: 0 1px 0 rgba(0,0,0,0.05);
-  pointer-events: none; /* allow clicks to pass through */
-  z-index: 9;
-  white-space: nowrap;
-}
+  /* Contact form */
+  .contact-form label{display:block;margin:0.6rem 0}
+  .contact-form input,.contact-form textarea{width:100%;padding:0.7rem;border:1px solid #e6e6e6;border-radius:8px}
 
-/* Slightly different style for small screens */
-@media (max-width:600px){
-  .img-watermark-overlay{font-size:32px;opacity:0.14}
-}
+  /* Footer */
+  .site-footer{background:var(--sub);padding:24px 0;margin-top:24px}
+  .footer-inner{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+  .footer-nav a{margin-right:1rem;color:var(--text);text-decoration:none}
+  .social a{margin-left:0.6rem;text-decoration:none;color:var(--text)}
 
-/* レスポンシブ */
-@media (max-width:900px){
-  .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-  .hero-inner{flex-direction:column}
-  .hero-image{width:100%}
-  .product-grid{grid-template-columns:1fr}
-}
-@media (max-width:600px){
-  .grid{grid-template-columns:1fr}
-  .main-nav{display:none}
-  .menu-toggle{display:block}
-  .card{padding:0.6rem}
-  .card img{height:180px}
-  .container{padding:0.75rem}
-  .hero-text h1{font-size:1.4rem}
+  /* Small screens adjustments */
+  @media (min-width:480px){
+    .hero-image{height:260px}
+  }
+
+  @media (min-width:768px){
+    .container{padding:2rem}
+    .menu-toggle{display:none}
+    .header-inner{padding:1rem 2rem}
+    .hero-wrap{grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+    .hero-text h1{font-size:2.6rem}
+    .hero-image{height:360px}
+    .features-grid{grid-template-columns:repeat(3,1fr)}
+    .products-grid{grid-template-columns:repeat(3,1fr)}
+    .about-wrap{grid-template-columns:2fr 1fr}
+    .footer-inner{flex-direction:row;justify-content:space-between;align-items:center}
+  }
+
+  @media (min-width:1024px){
+    .container{padding:3rem}
+    .hero-text h1{font-size:3rem}
+  }
+
   .lead{font-size:0.95rem}
   /* Buttons full width on small screens for easier tapping */
   .btn, .btn.small {display:block;width:100%;text-align:center}
