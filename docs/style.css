@@ -98,6 +98,13 @@
     .hero-text h1{font-size:3rem}
   }
 
+  /* Embedded Google Form styling */
+  .form-embed{width:100%;max-width:var(--max-width);margin:0 auto;padding:0.5rem}
+  .form-embed iframe{width:100%;border:0;border-radius:8px;min-height:560px}
+  @media (max-width:600px){
+    .form-embed iframe{min-height:720px}
+  }
+
   /* Additional rules for sections, anchors and accessibility */
   html{scroll-behavior:smooth}
   /* ensure anchor targets are visible under fixed header */
